@@ -5,8 +5,8 @@ def character_count(text):	# trying to count individual characters after setting
 	characters = {}
 	text_lower = text.lower()
 	for char in text_lower:
-		if char not in text_lower:
+		if char not in characters:
 			characters[char] = 0
-		if char in characters
+		if char in characters:
 			characters[char] += 1
-	return
+	return characters

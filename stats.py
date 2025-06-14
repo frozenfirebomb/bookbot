@@ -11,12 +11,12 @@ def character_count(text):	# counts individual characters after setting them all
 			characters[char] += 1
 	return characters
 
-def character_sort(character_count(text)):
+def character_sort(character_count):
 	list_of_character_dicts = []
-	character_dict = {}
 	for char in character_count:
+		character_dict = {}
 		character_dict["char"] = char
-		character_dict["num"] = char
+		character_dict["num"] = character_count[char]
 		list_of_character_dicts.append(character_dict)
-		pass
+	return list_of_character_dicts
 

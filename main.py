@@ -1,5 +1,17 @@
+import sys
+
+from stats import(
+	word_count,
+	character_count,
+	character_sort,
+)
+
+if len(sys.argv) !=2:
+	print("Usage: python3 main.py <path_to_book>")
+	sys.exit(1)
+
 def main ():
-	book_path = "books/frankenstein.txt"
+	book_path = sys.argv[1]
 	text = get_book_text(book_path)
 
 	print("============ BOOKBOT ============")
@@ -16,11 +28,5 @@ def get_book_text(fp):        #this function returns the contents of a file as a
 	with open(fp) as f:
 		file_contents = f.read()
 	return file_contents
-
-from stats import word_count
-
-from stats import character_count
-
-from stats import character_sort
 
 main()

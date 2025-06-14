@@ -18,5 +18,8 @@ def character_sort(character_count):
 		character_dict["char"] = char
 		character_dict["num"] = character_count[char]
 		list_of_character_dicts.append(character_dict)
+	def sort_dict(list_of_character_dicts):
+		return list_of_character_dicts["num"]
+	list_of_character_dicts.sort(reverse=True, key=sort_dict)
 	return list_of_character_dicts
 
